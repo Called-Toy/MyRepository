@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center>
+        <h1>在线相册信息管理</h1>
+        <h4>
+          <a href="{% url 'index' %}">返回首页</a>
+          <a href="{% url 'pictures' 1 %}">浏览相册信息</a>
+          <a href="{% url 'upload' %}">发布相册信息</a>
+        </h4>
+          <hr>
+        <h2>{{info}}</h2>
+    </center>
+</body>
+</html>
