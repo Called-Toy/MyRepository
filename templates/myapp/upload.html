@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布相册信息</title>
+</head>
+<body>
+{% load static from static %}
+  <center>
+    <h1>在线相册信息管理</h1>
+    <h4>
+      <a href="{% url 'index' %}">返回首页</a>
+      <a href="{% url 'pictures' 1 %}">浏览相册信息</a>
+      <a href="{% url 'upload' %}">发布相册信息</a>
+    </h4>
+      <hr>
+    <h3>添加相册信息</h3>
+    <form action="{% url 'doupload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        标题：<input type="text" name="name"><p></p>
+        图片：<input type="file" name="pic"><p></p>
+        <input type="submit",value="添加">
+        <input type="reset",value="重置">
+    </form><P></P><p></p>
+    <img src='{% static "pics/1716275132.0738523.png" %}' alt="My image"/>
+  </center>
+
+</body>
+</html>
